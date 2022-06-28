@@ -1,7 +1,7 @@
 import pygame
 import constantes
 import sprites
-
+import os
 
 class Game:
     def __init__(self):
@@ -52,6 +52,12 @@ class Game:
         self.tela.fill(constantes.BLACK)
         self.todas_as_sprites.draw(self.tela)
         pygame.display.flip()
+    
+
+    def carregar_arquivos(self):
+        # Carregar os arquivos do jogo
+        diretorio_imagens = os.path.join(os.getcwd(), 'imagens')
+
     
 
     def mostrar_tela_start(self):...
